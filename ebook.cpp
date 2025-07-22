@@ -1,4 +1,4 @@
-#include <iostream>
+#include <iostream> 
 #include <string>
 #include <unordered_map>
 #include <map>
@@ -32,10 +32,11 @@ public:
 		int count = 0;
 		for (auto it = users_on_page_.begin(); it != users_on_page_.end() && it->first < user_page; ++it) {
 			count += it->second;
-		}
+		} // Неэффективный метод, можно уменьшить временную сложность
 
 		return (count * 1.0) / (user_to_page_.size() - 1);
 	}
+// Неэффективный метод "Cheer", можно уменьшить временную сложность.
 
 private:
 	std::map<int, int> users_on_page_;
@@ -66,3 +67,5 @@ int main() {
 
 	return 0;
 }
+
+// Немного странный стиль кода, где-то есть пробелы, а где-то нет.
